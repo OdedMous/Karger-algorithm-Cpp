@@ -5,4 +5,6 @@
 | *by wikipedia* |
 
 
-<img src="../master/images/mincut_wiki.png" width="150">
+|<img src="../master/images/mincut_wiki.png" width="300">|
+|:--:| 
+| *by wikipedia* |
