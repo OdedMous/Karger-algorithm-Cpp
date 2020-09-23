@@ -5,4 +5,4 @@
 | *by wikipedia* |
 
 
-<img src="../master/images/mincut_wiki.png" width="48">
+<img src="../master/images/mincut_wiki.png" width="150">
