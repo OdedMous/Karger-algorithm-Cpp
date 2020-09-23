@@ -1,9 +1,4 @@
-# Karger-s-algorithm
-
-| ![Figure1](../master/images/mincut_wiki.png) | 
-|:--:| 
-| *by wikipedia* |
-
+# Karger's algorithm
 
 |<img src="../master/images/mincut_wiki.png" width="300">|
 |:--:| 
