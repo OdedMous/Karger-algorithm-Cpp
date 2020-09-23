@@ -2,7 +2,7 @@
 
 |<img src="../master/images/mincut_wiki.png" width="300">|
 |:--:| 
-| *by wikipedia* |
+| *image from wikipedia* |
 
 ## Goal </br>
 Implementation of karger's algorithm which designed to find a minimum cut with high probability.
