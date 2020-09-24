@@ -7,7 +7,7 @@
 ## Goal </br>
 Implement karger's algorithm which designed to find a minimum cut in connected graph *with high probability*.
 
-## Example of using minimum cut problem
+## Example of reducing a problem to a minimum-cut problem  
 Suppose a products company wants to design two catalogs, each is desinged for a different consumer sector. The company has a list of consumers and thier purchase history. How the set of consumers can be divided into two relevant sectors?  </br>
 A possible solution: create a graph in which each node is a consumer, and connect two nodes with an edge if thier purchase history is similar. Now the goal will be to divide the set of nodes into two groups of nodes such that between these 2 groups there are the fewest edges, meaning the purchase history between them is the least similar as required. Note that finding such two groups is equivalent to finding a minumum cut in the graph.
 
