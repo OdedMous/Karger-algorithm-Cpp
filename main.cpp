@@ -96,50 +96,28 @@ void contraction(Arc &selected_arc, std::vector<Arc> &arcs) {
         }
 
 
-        if (it->v1 == selected_arc.v1) {
-            new_arcs.insert(new_arcs.end(), Arc(new_vertex, it->v2));
-            arcs.erase(it);
-            it--;
-            continue;
-        }
-        if (it->v1==selected_arc.v2) {
+        if (it->v1 == selected_arc.v1 or it->v1==selected_arc.v2) {
             new_arcs.insert(new_arcs.end(), Arc(new_vertex, it->v2));
             arcs.erase(it);
             it--;
             continue;
         }
 
-        if (it->v2==selected_arc.v1) {
+
+        if (it->v2==selected_arc.v1 or it->v2==selected_arc.v2) {
             new_arcs.insert(new_arcs.end(), Arc(new_vertex, it->v1));
             arcs.erase(it);
             it--;
             continue;
 
         }
-        if  (it->v2==selected_arc.v2) {
-            new_arcs.insert(new_arcs.end(), Arc(new_vertex, it->v1));
-            arcs.erase(it);
-            it--;
-        }
-
     }
     arcs.insert(arcs.begin(),new_arcs.begin(),new_arcs.end());
-
-    std::cout << "***********************************" << '\n';
-    std::cout << "Selected arc: " << selected_arc << "\n"; // TODO
-    std::cout << "Arcs after contraction:" << "\n"; // TODO
-
-    for (std::vector<Arc>::iterator it= arcs.begin(); it != arcs.end(); it++) {
-        std::cout << *it << '\n'; // TODO
-
-    }
-    std::cout << "***********************************" << '\n';
-
 }
 
 
 /**
-* Implement 1 iteration of Karger's algorithm.
+* Implement one iteration of Karger's algorithm.
 */
 
 auto karger_alg_loop(std::vector<Arc> arcs, int num_vertex)
@@ -203,12 +181,11 @@ int main() {
     Arc arc2(std::vector<int> {1}, std::vector<int> {0});
     Arc arc3(std::vector<int> {3}, std::vector<int> {0});
     Arc arc4(std::vector<int> {0}, std::vector<int> {2});
-
     std::vector<Arc> arcs_list {arc1, arc2, arc3, arc4};
     int num_vertex = 4;
 
-    auto [group1, group2, mincut_size] = karger_alg(arcs_list, num_vertex, 2);
-    std::cout << "Results: Cut size:" << mincut_size << "\nGroup1:\n" << group1 << "\nGroup2:\n" << group2;
+    auto [group1, group2, mincut_size] = karger_alg(arcs_list, num_vertex, 3);
+    std::cout << "**Results**\nCut size:" << mincut_size << "\nGroup1: " << group1 << "\nGroup2: " << group2;
 
 
     return 0;
