@@ -1,4 +1,4 @@
-# Karger's algorithm
+# Karger's algorithm - Still Editing
 
 |<img src="../master/images/mincut_wiki.png" width="300">|
 |:--:| 
