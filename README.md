@@ -1,4 +1,4 @@
-# Karger's algorithm - Still Editing
+# Karger's algorithm 
 
 An implementation of the Karger's algorithm for finding a minimum cut in a graph with high probability.
 
